@@ -16,6 +16,7 @@ services:
     build: 
       dockerfile: Dockerfile.dev
       context: ./nginx
+    image: acrlabs01.azurecr.io/nginx
     ports:
     - '3000:80'    
   
@@ -23,6 +24,7 @@ services:
     build: 
       dockerfile: Dockerfile.dev
       context: ./server
+    image: acrlabs01.azurecr.io/api
     volumes:
       - /app/node_modules
       - ./server:/app
@@ -41,6 +43,7 @@ services:
     build: 
       dockerfile: Dockerfile.dev
       context: ./client
+    image: acrlabs01.azurecr.io/client
     volumes:
       - /home/node/app/node_modules
       - ./client:/home/node/app
@@ -49,6 +52,7 @@ services:
     build: 
       dockerfile: Dockerfile.dev
       context: ./worker
+    image: acrlabs01.azurecr.io/worker
     volumes:
       - /app/node_modules
       - ./worker:/app
