@@ -12,7 +12,7 @@ terraform.tfvars
 .terraform/
 terraform.tfstate.d/
 logs/ 
-*.terraform.lock.hcl
+
 
 # Go vendor directory
 vendor/
