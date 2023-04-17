@@ -1,4 +1,4 @@
-terraform {
+/*terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
@@ -6,6 +6,16 @@ terraform {
     }
   }
 }
+
+terraform {
+  backend "azurerm" {
+    resource_group_name = "RGremotestate"
+    storage_account_name = "remotestatelabstg"
+    container_name = "remotestagelab"
+    key = "terraform_remotastate_lab"
+    
+  }
+}*/
 
 provider "azurerm" {
   features {}
@@ -42,14 +52,14 @@ module "tf-azure-acr" {
   location            = var.location
 }
 
-module "tf-azure-aks" {
+/*module "tf-azure-aks" {
   source              = "./modules/tf-azure-aks"
   resource_group_name = module.tf-azure-resource_group.name
   name                = "${var.name}${random_string.random.result}"
   location            = var.location
   service_principal_client_id     = "${var.CLIENT_ID}"
   service_principal_client_secret = "${var.CLIENT_SECRET}"
-}
+}*/
 
 
 
