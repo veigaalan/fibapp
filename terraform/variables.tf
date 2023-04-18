@@ -21,3 +21,7 @@ variable "CLIENT_ID" {
 variable "CLIENT_SECRET" {
   description = "The Client Secret (password) for the Service Principal used for the AKS deployment"
 }
+
+variable "ARM_ACCESS_KEY" {
+  description = "key storage account"
+}

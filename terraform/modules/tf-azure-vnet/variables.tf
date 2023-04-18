@@ -18,12 +18,3 @@ variable "resource_group_name" {
   description = "Resource Group name."
   type = string
 }
-
-/*variable "service_principal_client_id" {
-  description = "The Client ID of the Service Principal assigned to Kubernetes"
-}
-
-variable "service_principal_client_secret" {
-  description = "The Client Secret of the Service Principal assigned to Kubernetes"
-}
-*/
